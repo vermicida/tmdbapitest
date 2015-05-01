@@ -1,0 +1,23 @@
+<header>
+	<blockquote class="pull-right">
+		<p>Más votadas</p>
+	</blockquote>
+</header>
+<article>
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat="movie in model.movies">
+				<td>
+					<img ng-src="{{ fn.getMovieThumbImageUrl(movie) }}" ng-alt="{{ movie.name }}" class="img-thumbnail" />
+				</td>
+				<td>
+					<a ng-click="fn.goToMovie(movie)">{{ movie.title }}</a>
+				</td>
+				<td>{{ movie.release_date | releaseDate }}</td>
+				<td>
+					<span class="badge">{{ fn.getFixedMovieVoteAverage(movie) }}</span> <small>basada en {{ movie.vote_count }} votos</small>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</article>

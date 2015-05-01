@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="movies">
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Movies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles/css/app.css" />
+</head>
+<body>
+	<div ng-show="fn.appIsWorking()" class="working"></div>
+	<div ng-controller="MainController" class="container">
+		<header>
+			<h1>Movies & Series</h1>
+			<h4>Porque IMDb es muy mainstream</h4>
+			<nav>
+				<ul class="nav nav-tabs" role="tablist">
+					<li ng-class="{ active: fn.routeIsMovies() }">
+						<a href="#/movies/upcoming">Películas</a>
+					</li>
+					<li ng-class="{ active: fn.routeIsSeries() }">
+						<a href="#/series/airing_today">Series</a>
+					</li>
+					<li ng-class="{ active: fn.routeIsPeople() }">
+						<a href="#/people/popular">Gente</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section app-view-segment="0"></section>
+		<footer>
+			<img src="styles/images/var_5_0_tmdb-logo-1Line-GreenGradient-Bree.png" alt="Powered by themoviedatabase.org" class="center-block" />
+		</footer>
+	</div>
+	<script src="vendor/angular.min.js"></script>
+	<script src="vendor/angular-route.min.js"></script>
+	<script src="vendor/angular-route-segment.min.js"></script>
+	<script src="vendor/angular-locale_es-es.js"></script>
+	<script src="vendor/angular-youtube-embed.min.js"></script>
+	<script src="vendor/ui-bootstrap-tpls-0.11.2.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/filters/BirthPlace.js"></script>
+	<script src="scripts/filters/Character.js"></script>
+	<script src="scripts/filters/FirstAirDate.js"></script>
+	<script src="scripts/filters/PersonalDate.js"></script>
+	<script src="scripts/filters/ReleaseDate.js"></script>
+	<script src="scripts/directives/CreditsDock.js"></script>
+	<script src="scripts/directives/GenresDock.js"></script>
+	<script src="scripts/directives/MovieCreditsDock.js"></script>
+	<script src="scripts/directives/SerieCreditsDock.js"></script>
+	<script src="scripts/directives/SimilarDock.js"></script>
+	<script src="scripts/directives/VotesDock.js"></script>
+	<script src="scripts/directives/VideosDock.js"></script>
+	<script src="scripts/services/MoviesProvider.js"></script>
+	<script src="scripts/services/PeopleProvider.js"></script>
+	<script src="scripts/services/SeriesProvider.js"></script>
+	<script src="scripts/services/TMDBProvider.js"></script>
+	<script src="scripts/controllers/MainController.js"></script>
+	<script src="scripts/controllers/MoviesController.js"></script>
+	<script src="scripts/controllers/MoviesDetailsController.js"></script>
+	<script src="scripts/controllers/MoviesNowPlayingController.js"></script>
+	<script src="scripts/controllers/MoviesPopularController.js"></script>
+	<script src="scripts/controllers/MoviesSearchController.js"></script>
+	<script src="scripts/controllers/MoviesTopRatedController.js"></script>
+	<script src="scripts/controllers/MoviesUpcomingController.js"></script>
+	<script src="scripts/controllers/PeopleController.js"></script>
+	<script src="scripts/controllers/PeopleDetailsController.js"></script>
+	<script src="scripts/controllers/PeoplePopularController.js"></script>
+	<script src="scripts/controllers/PeopleSearchController.js"></script>
+	<script src="scripts/controllers/SeriesAiringTodayController.js"></script>
+	<script src="scripts/controllers/SeriesController.js"></script>
+	<script src="scripts/controllers/SeriesDetailsController.js"></script>
+	<script src="scripts/controllers/SeriesOnTheAirController.js"></script>
+	<script src="scripts/controllers/SeriesPopularController.js"></script>
+	<script src="scripts/controllers/SeriesSearchController.js"></script>
+	<script src="scripts/controllers/SeriesTopRatedController.js"></script>
+	<script src="scripts/controllers/YouTubeModalController.js"></script>
+</body>
+</html>

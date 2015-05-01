@@ -1,0 +1,164 @@
+a:hover {
+	cursor: pointer;
+}
+
+section {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.working {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #333;
+	opacity: 0.2;
+}
+
+.table tbody tr td {
+	vertical-align: middle;
+}
+
+.bs-callout {
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #eee;
+	border-left-width: 5px;
+	border-radius: 3px;
+}
+
+.bs-callout h4 {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.bs-callout p:last-child {
+	margin-bottom: 0;
+}
+
+.bs-callout-primary {
+	border-left-color: #428bca;
+}
+
+.bs-callout-primary h4 {
+	color: #428bca;
+}
+
+.bs-callout-info {
+	border-left-color: #5bc0de;
+}
+
+.bs-callout-info h4 {
+	color: #5bc0de;
+}
+
+.bs-callout-warning {
+	border-left-color: #f0ad4e;
+}
+
+.bs-callout-warning h4 {
+	color: #f0ad4e;
+}
+
+.bs-callout-danger {
+	border-left-color: #d9534f;
+}
+
+.bs-callout-danger h4 {
+	color: #d9534f;
+}
+
+div.movies-search-box {
+	width: 300px;
+	position: relative;
+	left: 471px;
+	bottom: 36px;
+}
+
+div.people-search-box {
+	width: 300px;
+	position: relative;
+	left: 123px;
+	bottom: 36px;
+}
+
+div.series-search-box {
+	width: 300px;
+	position: relative;
+	left: 400px;
+	bottom: 36px;
+}
+
+div.votes-dock > span,
+div.votes-dock > small {
+	vertical-align: middle;
+}
+
+div.votes-dock > .badge {
+	margin-left: 6px;
+}
+
+div.votes-dock > small {
+	margin-left: 6px;
+}
+
+div.genres-dock {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+div.genres-dock > span:first-child {
+	margin-left: 0;
+}
+
+div.genres-dock > span {
+	margin-left: 6px;
+}
+
+div.credits-dock > div > span::after {
+	content: ",";
+	margin-left: -3px;
+}
+
+div.credits-dock > div > span:last-child::after {
+	content: "";
+}
+
+div.similar-movies-dock > div {
+	margin-top: 12px;
+	margin-bottom: -12px;
+}
+
+div.similar-movies-dock > div > span {
+	padding-right: 12px;
+	padding-bottom: 12px;
+	display: inline-block;
+}
+
+div.similar-movies-dock > div > span:last-child {
+	padding-right: 0;
+}
+
+td.known-for-row > span {
+	padding-right: 12px;
+	display: inline-block;
+}
+
+div.movie-credits-dock > div,
+div.serie-credits-dock > div {
+	padding-top: 10px;
+	margin-bottom: -10px;
+}
+
+div.movie-credits-dock > div > table > tbody > tr:first-child > td,
+div.serie-credits-dock > div > table > tbody > tr:first-child > td {
+	border-top: none;
+}
+
+div.movie-credits-dock > div > table > tbody > tr > td:last-child,
+div.serie-credits-dock > div > table > tbody > tr > td:last-child {
+	width: 24%;
+}

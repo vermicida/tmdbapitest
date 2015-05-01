@@ -1,0 +1,28 @@
+<div>
+	<a ng-click="fn.goBack()" class="pull-right">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		Volver
+	</a>
+</div>
+<article>
+	<header>
+		<div class="row">
+			<div class="col-md-2">
+				<img ng-src="{{ fn.getSerieDetailsImageUrl() }}" class="img-thumbnail" />
+			</div>
+			<div class="col-md-10">
+				<h3>{{ model.details.name }}</h3>
+				<p ng-show="fn.serieHasOriginalName()">Título original {{ model.details.original_name }}</p>
+				<votes-dock vote-average="model.details.vote_average" vote-count="model.details.vote_count"></votes-dock>
+				<genres-dock genres="model.details.genres"></genres-dock>
+				<credits-dock credits="model.details.credits"></credits-dock>
+			</div>
+		</div>
+	</header>
+	<div ng-show="fn.serieHasOverview()" class="bs-callout bs-callout-primary">
+		<h4>Sinopsis</h4>
+		<p ng-bind-html="fn.getSerieOverview()"></p>
+	</div>
+	<videos-dock videos="model.details.videos"></videos-dock>
+	<similar-dock similar="model.details.similar" item-type="serie"></similar-dock>
+</article>

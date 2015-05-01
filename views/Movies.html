@@ -1,0 +1,29 @@
+<header>
+	<nav>
+		<ul class="nav nav-tabs" role="tablist">
+			<li>
+				<a href="#/movies/upcoming">Próximamente</a>
+			</li>
+			<li>
+				<a href="#/movies/now_playing">En cartelera</a>
+			</li>
+			<li>
+				<a href="#/movies/top_rated">Más votadas</a>
+			</li>
+			<li>
+				<a href="#/movies/popular">De actualidad</a>
+			</li>
+		</ul>
+		<div class="movies-search-box">
+			<form>
+				<div class="input-group input-group-sm">
+					<input ng-model="model.search" type="text" class="form-control">
+					<span class="input-group-btn">
+						<button ng-click="fn.doSearch()" class="btn btn-primary">Buscar</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</nav>
+</header>
+<section app-view-segment="1"></section>

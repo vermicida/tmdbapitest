@@ -1,0 +1,29 @@
+<header>
+	<nav>
+		<ul class="nav nav-tabs" role="tablist">
+			<li ng-class="{ active: fn.routeIsAiringToday() }">
+				<a href="#/series/airing_today">Hoy</a>
+			</li>
+			<li ng-class="{ active: fn.routeIsOnTheAir() }">
+				<a href="#/series/on_the_air">En emisión</a>
+			</li>
+			<li ng-class="{ active: fn.routeIsTopRated() }">
+				<a href="#/series/top_rated">Más votadas</a>
+			</li>
+			<li ng-class="{ active: fn.routeIsPopular() }">
+				<a href="#/series/popular">De actualidad</a>
+			</li>
+		</ul>
+		<div class="series-search-box">
+			<form>
+				<div class="input-group input-group-sm">
+					<input ng-model="model.search" type="text" class="form-control">
+					<span class="input-group-btn">
+						<button ng-click="fn.doSearch()" class="btn btn-primary">Buscar</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</nav>
+</header>
+<section app-view-segment="1"></section>

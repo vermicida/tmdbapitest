@@ -1,0 +1,11 @@
+<div class="modal-header">
+	<h3 class="modal-title">{{ model.video.name }}</h3>
+</div>
+<div class="modal-body">
+	<div class="embed-responsive embed-responsive-16by9">
+		<youtube-video id="video-id-random-1" video-id="model.video.key" player-vars="model.settings"></youtube-video>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="fn.close()">Cerrar</button>
+</div>

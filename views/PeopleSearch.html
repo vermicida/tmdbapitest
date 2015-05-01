@@ -1,0 +1,32 @@
+<header>
+	<blockquote class="pull-right">
+		<p>Resultados de <em class="text-primary">{{ model.key }}</em></p>
+	</blockquote>
+</header>
+<article>
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat="person in model.searchResult.results">
+				<td>
+					<img ng-src="{{ fn.getPersonThumbImageUrl(person) }}" ng-alt="{{ person.name }}" class="img-thumbnail" />
+				</td>
+				<td>
+					<a ng-click="fn.goToPerson(person)">{{ person.name }}</a>
+				</td>
+				<td>
+					<span class="badge">{{ fn.getFixedPopularity(person) }}</span> <small> de popularidad</small>
+				</td>
+				<td class="known-for-row">
+					<span ng-repeat="item in person.known_for" tooltip="{{ fn.getItemTitle(item) }}">
+						<a ng-click="fn.goToItem(item)">
+							<img ng-src="{{ fn.getItemThumbImageUrl(item) }}" ng-alt="{{ fn.getItemTitle(item) }}" class="img-thumbnail" />
+						</a>
+					</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div ng-if="fn.shouldShowPaginator()">
+		<pagination ng-model="model.page" items-per-page="20" total-items="model.searchResult.total_results" num-pages="model.searchResult.total_pages" boundary-links="false" rotate="false" class="pagination-sm"></pagination>
+	</div>
+</article>

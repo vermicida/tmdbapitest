@@ -1,0 +1,23 @@
+<header>
+	<blockquote class="pull-right">
+		<p>Más votadas</p>
+	</blockquote>
+</header>
+<article>
+	<table class="table table-striped">
+		<tbody>
+			<tr ng-repeat="serie in model.series">
+				<td>
+					<img ng-src="{{ fn.getSerieThumbImageUrl(serie) }}" ng-alt="{{ serie.name }}" class="img-thumbnail" />
+				</td>
+				<td>
+					<a ng-click="fn.goToSerie(serie)">{{ serie.name }}</a>
+				</td>
+				<td>{{ serie.first_air_date | firstAirDate }}</td>
+				<td>
+					<span class="badge">{{ fn.getFixedSerieVoteAverage(serie) }}</span> <small>basada en {{ serie.vote_count }} votos</small>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</article>

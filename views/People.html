@@ -1,0 +1,20 @@
+<header>
+	<nav>
+		<ul class="nav nav-tabs" role="tablist">
+			<li ng-class="{ active: fn.routeIsPopular() }">
+				<a href="#/people/popular">De actualidad</a>
+			</li>
+		</ul>
+		<div class="people-search-box">
+			<form>
+				<div class="input-group input-group-sm">
+					<input ng-model="model.search" type="text" class="form-control">
+					<span class="input-group-btn">
+						<button ng-click="fn.doSearch()" class="btn btn-primary">Buscar</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</nav>
+</header>
+<section app-view-segment="1"></section>
