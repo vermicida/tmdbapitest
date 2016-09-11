@@ -1,0 +1,14 @@
+<div class="bs-callout bs-callout-warning tv-show-credits-dock">
+    <h4>Apariciones en series</h4>
+    <div ng-if="thereAreTVShows()">
+        <table class="table">
+            <tbody>
+                <tr ng-repeat="tvShow in tvShows.cast | orderBy:'first_air_date':true">
+                    <td>En <a ui-sref="tvshows.details({ tvShowId: tvShow.id })">{{ tvShow.name }}</a>{{ tvShow.character | character }}</td>
+                    <td>{{ tvShow.first_air_date | firstAirDate }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p ng-if="!thereAreTVShows()">No hay créditos disponibles.</p>
+</div>

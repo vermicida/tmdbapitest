@@ -1,0 +1,14 @@
+<div class="credits-dock">
+    <div ng-if="creditsHasDirectors()">
+        <strong>Director:</strong>
+        <span ng-repeat="person in directors">
+            <a ui-sref="people.details({ personId: person.id })">{{ person.name }}</a>
+        </span>
+    </div>
+    <div ng-if="creditsHasCast()">
+        <strong>Actores:</strong>
+        <span ng-repeat="person in credits.cast">
+            <a ui-sref="people.details({ personId: person.id })">{{ person.name }}</a>
+        </span>
+    </div>
+</div>

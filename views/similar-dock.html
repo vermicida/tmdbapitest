@@ -1,0 +1,11 @@
+<div class="bs-callout bs-callout-warning similar-movies-dock">
+    <h4>{{ getItemType() }} similares</h4>
+    <div ng-if="thereAreSimilarItems()">
+        <span ng-repeat="item in similar.results" tooltip="{{ getItemTitle(item) }}">
+            <a ng-click="goToItem(item)">
+                <img ng-src="{{ getItemThumbImageUrl(item) }}" ng-alt="{{ getItemTitle(item) }}" class="img-thumbnail" />
+            </a>
+        </span>
+    </div>
+    <p ng-if="!thereAreSimilarItems()">No hay {{ getItemType() }} similares disponibles.</p>
+</div>

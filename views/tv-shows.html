@@ -1,0 +1,20 @@
+<header>
+    <nav>
+        <ul class="nav nav-tabs" role="tablist">
+            <li ng-class="{ active: $ctrl.routeIsAiringToday() }">
+                <a ui-sref="tvshows.airing-today">Hoy</a>
+            </li>
+            <li ng-class="{ active: $ctrl.routeIsOnTheAir() }">
+                <a ui-sref="tvshows.on-the-air">En emisión</a>
+            </li>
+            <li ng-class="{ active: $ctrl.routeIsTopRated() }">
+                <a ui-sref="tvshows.top-rated">Más votadas</a>
+            </li>
+            <li ng-class="{ active: $ctrl.routeIsPopular() }">
+                <a ui-sref="tvshows.popular">De actualidad</a>
+            </li>
+        </ul>
+        <search-box css-class="tv-shows-search-box" on-search="$ctrl.search(text)"></search-box>
+    </nav>
+</header>
+<section ui-view></section>

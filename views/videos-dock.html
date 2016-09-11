@@ -1,0 +1,9 @@
+<div class="bs-callout bs-callout-danger">
+    <h4>Vídeos</h4>
+    <ol ng-if="thereAreVideos()">
+        <li ng-repeat="video in youTubeVideos">
+            <a ng-click="openMovieVideoModal(video)">{{ video.name }}</a>
+        </li>
+    </ol>
+    <p ng-if="!thereAreVideos()">No hay vídeos disponibles.</p>
+</div>

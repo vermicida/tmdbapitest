@@ -1,0 +1,23 @@
+<header>
+    <blockquote class="pull-right">
+        <p>{{ $ctrl.title }}</p>
+    </blockquote>
+</header>
+<article>
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="tvShow in $ctrl.tvShows.results">
+                <td>
+                    <img ng-src="{{ $ctrl.getTVShowThumbImageUrl(tvShow) }}" ng-alt="{{ tvShow.name }}" class="img-thumbnail" />
+                </td>
+                <td>
+                    <a ui-sref="tvshows.details({ tvShowId: tvShow.id })">{{ tvShow.name }}</a>
+                </td>
+                <td>{{ tvShow.first_air_date | firstAirDate }}</td>
+                <td>
+                    <span class="badge">{{ $ctrl.getFixedTVShowVoteAverage(tvShow) }}</span> <small>basada en {{ tvShow.vote_count }} votos</small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>

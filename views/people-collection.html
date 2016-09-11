@@ -1,0 +1,29 @@
+<header>
+    <blockquote class="pull-right">
+        <p>{{ $ctrl.title }}</p>
+    </blockquote>
+    </header>
+<article>
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="person in $ctrl.people.results">
+                <td>
+                    <img ng-src="{{ $ctrl.getPersonThumbImageUrl(person) }}" ng-alt="{{ person.name }}" class="img-thumbnail" />
+                </td>
+                <td>
+                    <a ui-sref="people.details({ personId: person.id })">{{ person.name }}</a>
+                </td>
+                <td>
+                    <span class="badge">{{ $ctrl.getFixedPopularity(person) }}</span> <small> de popularidad</small>
+                </td>
+                <td class="known-for-row">
+                    <span ng-repeat="item in person.known_for" tooltip="{{ $ctrl.getItemTitle(item) }}">
+                        <a ng-click="$ctrl.goToItem(item)">
+                            <img ng-src="{{ $ctrl.getItemThumbImageUrl(item) }}" ng-alt="{{ $ctrl.getItemTitle(item) }}" class="img-thumbnail" />
+                        </a>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>

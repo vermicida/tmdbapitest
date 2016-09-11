@@ -1,0 +1,25 @@
+<div ng-show="$ctrl.appIsWorking()" class="working"></div>
+<div class="container">
+    <header>
+        <h1>Movies & Series</h1>
+        <h4>Porque IMDb es muy mainstream</h4>
+        <nav>
+            <ul class="nav nav-tabs" role="tablist">
+                <li ng-class="{ active: $ctrl.routeIsMovies() }">
+                    <a ui-sref="movies.upcoming">Películas</a>
+                </li>
+                <li ng-class="{ active: $ctrl.routeIsTvShow() }">
+                    <a ui-sref="tvshows.airing-today">Series</a>
+                </li>
+                <li ng-class="{ active: $ctrl.routeIsPeople() }">
+                    <a ui-sref="people.popular">Gente</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--<section app-view-segment="0"></section>-->
+    <section ui-view></section>
+    <footer>
+        <img src="images/var_5_0_tmdb-logo-1Line-GreenGradient-Bree.png" alt="Powered by themoviedatabase.org" class="center-block" />
+    </footer>
+</div>

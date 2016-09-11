@@ -1,0 +1,35 @@
+{
+  "name": "tmdbapitest",
+  "version": "1.0.0",
+  "description": "Aplicación de ejemplo de las tecnologías HTML5 + CSS3 + AngularJS.",
+  "homepage": "https://github.com/vermicida/tmdbapitest#readme",
+  "author": "Diego Herrera",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "tmdb",
+    "themoviedatabase"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vermicida/tmdbapitest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vermicida/tmdbapitest/issues"
+  },
+  "scripts": {
+    "start": "lite-server"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-i18n": "^1.5.8",
+    "angular-ui-bootstrap": "^2.1.3",
+    "angular-ui-router": "^1.0.0-beta.2",
+    "angular-youtube-embed": "^1.3.0",
+    "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}

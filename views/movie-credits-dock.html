@@ -1,0 +1,14 @@
+<div class="bs-callout bs-callout-danger movie-credits-dock">
+    <h4>Apariciones en películas</h4>
+    <div ng-if="thereAreMovies()">
+        <table class="table">
+            <tbody>
+                <tr ng-repeat="movie in movies.cast | orderBy:'release_date':true">
+                    <td>En <a ui-sref="movies.details({ movieId: movie.id })">{{ movie.title }}</a>{{ movie.character | character }}</td>
+                    <td>{{ movie.release_date | releaseDate }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p ng-if="!thereAreMovies()">No hay créditos disponibles.</p>
+</div>

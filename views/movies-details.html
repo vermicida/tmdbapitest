@@ -1,0 +1,27 @@
+<div>
+    <a ng-click="$ctrl.goBack()" class="pull-right">
+        <span class="glyphicon glyphicon-chevron-left"></span> Volver
+    </a>
+</div>
+<article>
+    <header>
+        <div class="row">
+            <div class="col-md-2">
+                <img ng-src="{{ $ctrl.getMovieDetailsImageUrl($ctrl.movie) }}" class="img-thumbnail" />
+            </div>
+            <div class="col-md-10">
+                <h3>{{ $ctrl.movie.title }}</h3>
+                <p ng-show="$ctrl.movieHasOriginalName()">Título original {{ $ctrl.movie.original_title }}</p>
+                <votes-dock vote-average="$ctrl.movie.vote_average" vote-count="$ctrl.movie.vote_count"></votes-dock>
+                <genres-dock genres="$ctrl.movie.genres"></genres-dock>
+                <credits-dock credits="$ctrl.details.credits"></credits-dock>
+            </div>
+        </div>
+    </header>
+    <div ng-show="$ctrl.movieHasOverview()" class="bs-callout bs-callout-primary">
+        <h4>Sinopsis</h4>
+        <p ng-bind-html="$ctrl.getMovieOverview()"></p>
+    </div>
+    <videos-dock videos="$ctrl.details.videos"></videos-dock>
+    <similar-dock similar="$ctrl.details.similar" item-type="movie"></similar-dock>
+</article>

@@ -1,0 +1,29 @@
+<div>
+    <a ng-click="$ctrl.goBack()" class="pull-right">
+        <span class="glyphicon glyphicon-chevron-left"></span> Volver
+    </a>
+</div>
+<article>
+    <header>
+        <div class="row">
+            <div class="col-md-2">
+                <img ng-src="{{ $ctrl.getPersonDetailsImageUrl() }}" class="img-thumbnail" />
+            </div>
+            <div class="col-md-10">
+                <h3>{{ $ctrl.person.name }}</h3>
+                <p class="text-muted">{{ $ctrl.person.place_of_birth | birthPlace }}</p>
+                <p class="text-muted">Nacimiento {{ $ctrl.person.birthday | personalDate }}</p>
+                <p ng-if="$ctrl.personHasDeathdate()" class="text-muted">Fallecimiento {{ $ctrl.person.deathday | personalDate }}</p>
+                <p>
+                    <a ng-href="{{ $ctrl.getIMDBProfileUrl() }}" target="_blank">Ver perfil de IMDB</a>
+                </p>
+            </div>
+        </div>
+    </header>
+    <div ng-show="$ctrl.personHasBiography()" class="bs-callout bs-callout-primary">
+        <h4>Biografía</h4>
+        <p ng-bind-html="$ctrl.getPersonBiography()"></p>
+    </div>
+    <movie-credits-dock movies="$ctrl.details.movie_credits"></movie-credits-dock>
+    <tv-show-credits-dock tv-shows="$ctrl.details.tv_credits"></tv-show-credits-dock>
+</article>
